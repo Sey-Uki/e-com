@@ -28,9 +28,24 @@
 		// react rules
 		"react/react-in-jsx-scope": "off",
 		"react/no-array-index-key": "error",
-
+		"react/jsx-sort-props": [
+			"error",
+			{
+				"callbacksLast": true,
+				"shorthandFirst": true,
+				"multiline": "last"
+			}
+		],
+		// typescript rules
+		"@typescript-eslint/no-unused-vars": [
+			"warn",
+			{
+				"vars": "all",
+				"args": "all",
+				"ignoreRestSiblings": false
+			}
+		],
 		// common rules
-		"no-unused-vars": "warn",
 		"no-else-return": "error",
 		"no-multi-spaces": "error",
 		"no-trailing-spaces": "error",
@@ -53,23 +68,31 @@
 				"tsx": "never"
 			}
 		],
-		"import/order":[
+		"import/order": [
 			"error",
 			{
-			  "groups": ["builtin", "external", "internal"],
-			  "pathGroups":[{
-				"pattern": "react",
-				"group": "external",
-				"position": "before"
-			  }],
-			  "pathGroupsExcludedImportTypes": ["react"],
-			  "newlines-between": "always",
-			  "alphabetize": {
-				"order": "asc",
-				"caseInsensitive":true
-			  }
+				"groups": [
+					"builtin",
+					"external",
+					"internal"
+				],
+				"pathGroups": [
+					{
+						"pattern": "react",
+						"group": "external",
+						"position": "before"
+					}
+				],
+				"pathGroupsExcludedImportTypes": [
+					"react"
+				],
+				"newlines-between": "always",
+				"alphabetize": {
+					"order": "asc",
+					"caseInsensitive": true
+				}
 			}
-		  ],
+		],
 		//prettier rules
 		"prettier/prettier": [
 			"error",
