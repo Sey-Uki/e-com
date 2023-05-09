@@ -1,10 +1,10 @@
-import { Header } from 'components/header';
-
 // export async function getStaticProps() {
 // Instead of the file system,
 // fetch post data from an external API endpoint
 // const res = await fetch('..');
 // return res.json();
+
+import { Header } from 'components/header/header';
 
 //   const allPostsData = getSortedPostsData();
 //   return {
@@ -14,7 +14,7 @@ import { Header } from 'components/header';
 //   };
 // }
 
-export default function Home({ allPostsData }: any) {
+export default function Home() {
   return (
     <>
       <Header />
