@@ -1,16 +1,19 @@
-import Image from "next/image";
-import Link from "next/link";
-import styles from "./header.module.css";
+import Image from 'next/image';
+import Link from 'next/link';
+
+import s from './header.module.css';
+
+const basketIcon = '/images/basket.svg';
 
 export const Header = () => {
   return (
-    <header className={styles.header}>
-      <div className={styles.container}>
-        <div className={styles.title}>
+    <header className={s.header}>
+      <div className={s.container}>
+        <div className={s.title}>
           <Link href="/">SHOP.</Link>
         </div>
 
-        <div className={styles.nav}>
+        <div className={s.nav}>
           <ul>
             <li>
               <Link href="/">Shop</Link>
@@ -27,9 +30,8 @@ export const Header = () => {
           </ul>
         </div>
 
-        <div className={styles.menu}>
-          <Image src="/images/search.svg" height={25} width={25} alt="search" />
-          <Image src="/images/basket.svg" height={25} width={25} alt="basket" />
+        <div className={s.menu}>
+          <Image alt="basket" height={25} src={basketIcon} width={25} />
         </div>
       </div>
     </header>
