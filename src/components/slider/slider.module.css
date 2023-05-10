@@ -23,18 +23,22 @@
 .fade {
     opacity: 0;
     animation-name: shownum;
-    animation-duration: 10s;
+    animation-duration: 12s;
     animation-fill-mode: forwards;
     animation-iteration-count: infinite;
-    animation-timing-function: ease-out;
 }
 
 @keyframes shownum {
-    from {
+    0% {
         opacity: 0;
     }
 
-    to {
+    50% {
         opacity: 1;
     }
+
+    100% {
+        opacity: 0;
+    }
+    
 }
