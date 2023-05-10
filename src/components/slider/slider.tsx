@@ -7,7 +7,7 @@ import { Card } from './card/card';
 import s from './slider.module.css';
 
 const IMAGES = ['/assets/images/roof-1.jpeg', '/assets/images/roof-2.jpeg'];
-const INTERVAL = 10000;
+const INTERVAL = 12000;
 
 export const Slider = () => {
   const [itemIndex, setItemIndex] = useState(0);

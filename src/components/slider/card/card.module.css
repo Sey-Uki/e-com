@@ -14,13 +14,17 @@
 .card p {
     margin-bottom: 20px;
     line-height: 1.7;
-
     color: #828282;
 }
 
 .price {
     font-size: 14px;
     letter-spacing: 3px;
+    font-weight: 300;
+}
+
+.description {
+    font-weight: 200;
 }
 
 .title {
