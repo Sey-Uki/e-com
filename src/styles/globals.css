@@ -85,8 +85,8 @@ body {
   overflow: hidden;
 }
 
-body {
-  color: rgb(var(--foreground-rgb));
+button {
+  cursor: pointer;
 }
 
 a {
@@ -97,10 +97,4 @@ a {
 
 a:hover {
   text-decoration: underline;
-}
-
-@media (prefers-color-scheme: dark) {
-  html {
-    color-scheme: dark;
-  }
 }
