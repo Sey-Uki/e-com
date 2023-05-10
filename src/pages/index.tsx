@@ -4,7 +4,8 @@
 // const res = await fetch('..');
 // return res.json();
 
-import { Header } from 'components/header/header';
+import { Header } from '../components/header/header';
+import { Slider } from '../components/slider/slider';
 
 //   const allPostsData = getSortedPostsData();
 //   return {
@@ -18,6 +19,7 @@ export default function Home() {
   return (
     <>
       <Header />
+      <Slider />
       {/* <Layout home>
         <section className={`${utilStyles.headingMd} ${utilStyles.padding1px}`}>
           <h2 className={utilStyles.headingLg}>Blog</h2>

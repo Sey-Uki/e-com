@@ -3,7 +3,7 @@ import Link from 'next/link';
 
 import s from './header.module.css';
 
-const basketIcon = '/images/basket.svg';
+const basketIcon = '/assets/images/basket.svg';
 
 export const Header = () => {
   return (
