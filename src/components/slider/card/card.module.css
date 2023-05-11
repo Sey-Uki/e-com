@@ -12,20 +12,11 @@
 }
 
 .card p {
-    margin-bottom: 15px;
+    margin-bottom: 20px;
     line-height: 1.7;
     color: #828282;
 }
 
 .description {
     font-weight: 200;
-}
-
-.title {
-    font-size: 24px;
-    font-weight: 400;
-    text-transform: uppercase;
-    letter-spacing: 2px;
-
-    margin: 0 0 15px 0;
 }

@@ -13,7 +13,7 @@ export const Products = () => {
       <Container extraClass={s.container}>
         <div className={s.top}>
           <p className={s.preTitle}>Cool stuff</p>
-          <SectionTitle text="Products." />
+          <SectionTitle content="Products." />
           <p className={s.slogan}>
             Dignissimos asperiores vitae velit veniam totam fuga molestias
             accusamus alias autem provident. Odit ab aliquam dolor eius.
