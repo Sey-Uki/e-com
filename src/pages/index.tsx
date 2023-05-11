@@ -1,6 +1,7 @@
 import { Nunito_Sans } from 'next/font/google';
 
 import { Header } from '../components/header/header';
+import { Products } from '../components/products/products';
 import { Slider } from '../components/slider/slider';
 
 const nunito = Nunito_Sans({
@@ -14,6 +15,7 @@ export default function Home() {
       <Header />
       <main>
         <Slider />
+        <Products />
       </main>
     </div>
   );
