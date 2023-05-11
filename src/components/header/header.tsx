@@ -2,13 +2,14 @@ import Image from 'next/image';
 import Link from 'next/link';
 
 import s from './header.module.css';
+import { Container } from '../container/container';
 
 const basketIcon = '/assets/images/basket.svg';
 
 export const Header = () => {
   return (
     <header className={s.header}>
-      <div className={s.container}>
+      <Container extraClass={s.container}>
         <div className={s.title}>
           <Link href="/">SHOP.</Link>
         </div>
@@ -31,9 +32,15 @@ export const Header = () => {
         </div>
 
         <div className={s.menu}>
-          <Image alt="basket" height={25} src={basketIcon} width={25} />
+          <Image
+            priority
+            alt="basket"
+            height={25}
+            src={basketIcon}
+            width={25}
+          />
         </div>
-      </div>
+      </Container>
     </header>
   );
 };
