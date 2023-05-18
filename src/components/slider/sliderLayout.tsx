@@ -5,6 +5,7 @@ import React, { useEffect, useState } from 'react';
 import Image from 'next/image';
 
 import s from './slider.module.css';
+import { Container } from '../container/container';
 
 const IMAGES = ['/assets/images/roof-1.jpeg', '/assets/images/roof-2.jpeg'];
 const INTERVAL = 12000;
@@ -34,7 +35,8 @@ export const SliderLayout = ({ card }: Props) => {
 
   return (
     <section className={s.slider}>
-      {card}
+      <Container extraClass={s.container}>{card}</Container>
+
       <div className={`${s.wrapper} ${s.fade}`}>
         <Image
           priority
