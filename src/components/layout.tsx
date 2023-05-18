@@ -4,7 +4,7 @@ import { Header } from '../components/header/header';
 import { Slider } from '../components/slider/slider';
 
 const nunito = Nunito_Sans({
-  weight: ['200', '300', '400', '600'],
+  weight: ['200', '300', '400', '600', '700', '800'],
   subsets: ['latin'],
 });
 

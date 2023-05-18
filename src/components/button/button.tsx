@@ -1,9 +1,9 @@
 import s from './button.module.css';
 
 type Props = {
-  text: string;
+  children: React.ReactNode;
 };
 
-export const Button = ({ text }: Props) => {
-  return <button className={s.button}>{text}</button>;
+export const Button = ({ children }: Props) => {
+  return <button className={s.button}>{children}</button>;
 };

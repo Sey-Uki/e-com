@@ -15,7 +15,7 @@ export const Card = ({ title, price, description }: Props) => {
       <Price text={`${price}₽`} />
       <SectionTitle content={title} />
       <p className={s.description}>{description}</p>
-      <Button text="Подробнее" />
+      <Button>Подробнее</Button>
     </div>
   );
 };
