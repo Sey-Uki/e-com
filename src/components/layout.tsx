@@ -1,6 +1,6 @@
 import { Nunito_Sans } from 'next/font/google';
 
-import { Header } from '../components/header/header';
+import { Header } from './header/header';
 import { Slider } from '../components/slider/slider';
 
 const nunito = Nunito_Sans({
