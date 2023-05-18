@@ -3,6 +3,7 @@ import Link from 'next/link';
 
 import { PRODUCTS } from './data';
 import s from './products.module.css';
+import BasketIcon from '../../../public/assets/images/basket.svg';
 import { Container } from '../container/container';
 import { Price } from '../price/price';
 import { SectionTitle } from '../sectionTitle/sectionTitle';
@@ -33,11 +34,17 @@ export const Products = () => {
                     width={0}
                   />
                 </div>
-                <Link href={`/product/${encodeURIComponent(item.id)}`}>
-                  <Subtitle text={item.name} />
-                </Link>
-
-                <Price text={item.price} />
+                <Subtitle>
+                  <Link href={`/product/${encodeURIComponent(item.id)}`}>
+                    {item.name}
+                  </Link>
+                </Subtitle>
+                <div className={s.bottom}>
+                  <Price text={item.price} />
+                  <button>
+                    → <BasketIcon />
+                  </button>
+                </div>
               </div>
             );
           })}
