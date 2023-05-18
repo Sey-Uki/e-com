@@ -1,4 +1,5 @@
 import Image from 'next/image';
+import Link from 'next/link';
 
 import { PRODUCTS } from './data';
 import s from './products.module.css';
@@ -32,7 +33,10 @@ export const Products = () => {
                     width={0}
                   />
                 </div>
-                <Subtitle text={item.name} />
+                <Link href={`/product/${encodeURIComponent(item.id)}`}>
+                  <Subtitle text={item.name} />
+                </Link>
+
                 <Price text={item.price} />
               </div>
             );
