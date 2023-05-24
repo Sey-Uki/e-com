@@ -6,7 +6,7 @@ import { useRouter } from 'next/router';
 import s from './product.module.css';
 import { Container } from '../../components/container/container';
 import Layout from '../../components/layout';
-import { MainTitle } from '../../components/mainTitle/mainTitle';
+import { DetailsTab } from '../../components/product/tabs/details';
 import { SectionTitle } from '../../components/sectionTitle/sectionTitle';
 import { PRODUCTS } from '../../utils/products';
 import { NextPageWithLayout } from '../_app';
@@ -39,8 +39,6 @@ const ProductPage: NextPageWithLayout = () => {
         </div>
       )}
 
-      <MainTitle>{product?.name}</MainTitle>
-
       <section className={s.tabs}>
         <button
           className={activeTab === 0 ? s.active : ''}
@@ -61,6 +59,13 @@ const ProductPage: NextPageWithLayout = () => {
           Отзывы
         </button>
       </section>
+      {activeTab === 0 && (
+        <DetailsTab
+          description={product?.description}
+          price={product?.price}
+          title={product?.name}
+        />
+      )}
     </Container>
   );
 };
