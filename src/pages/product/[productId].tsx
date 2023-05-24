@@ -7,8 +7,8 @@ import s from './product.module.css';
 import { Container } from '../../components/container/container';
 import Layout from '../../components/layout';
 import { MainTitle } from '../../components/mainTitle/mainTitle';
-import { PRODUCTS } from '../../components/products/data';
 import { SectionTitle } from '../../components/sectionTitle/sectionTitle';
+import { PRODUCTS } from '../../utils/products';
 import { NextPageWithLayout } from '../_app';
 
 const ProductPage: NextPageWithLayout = () => {

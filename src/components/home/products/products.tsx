@@ -1,13 +1,13 @@
 import Image from 'next/image';
 import Link from 'next/link';
 
-import { PRODUCTS } from './data';
 import s from './products.module.css';
-import BasketIcon from '../../../public/assets/images/basket.svg';
-import { Container } from '../container/container';
-import { Price } from '../price/price';
-import { SectionTitle } from '../sectionTitle/sectionTitle';
-import { Subtitle } from '../subtitle/subtitle';
+import BasketIcon from '../../../../public/assets/images/basket.svg';
+import { PRODUCTS } from '../../../utils/products';
+import { Container } from '../../container/container';
+import { Price } from '../../price/price';
+import { SectionTitle } from '../../sectionTitle/sectionTitle';
+import { Subtitle } from '../../subtitle/subtitle';
 
 export const Products = () => {
   return (
@@ -22,25 +22,25 @@ export const Products = () => {
           </p>
         </div>
         <div className={s.content}>
-          {PRODUCTS.map((item) => {
+          {PRODUCTS.map(({ name, thumbnail, id, price }) => {
             return (
-              <div className={s.item} key={item.id}>
+              <div className={s.item} key={id}>
                 <div className={s.thumbnail}>
                   <Image
-                    alt={item.name}
+                    alt={name}
                     height={0}
                     sizes="100vw"
-                    src={item.thumbnail}
+                    src={thumbnail}
                     width={0}
                   />
                 </div>
                 <Subtitle>
-                  <Link href={`/product/${encodeURIComponent(item.id)}`}>
-                    {item.name}
+                  <Link href={`/product/${encodeURIComponent(id)}`}>
+                    {name}
                   </Link>
                 </Subtitle>
                 <div className={s.bottom}>
-                  <Price text={item.price} />
+                  <Price>{price}</Price>
                   <button>
                     → <BasketIcon />
                   </button>
