@@ -1,9 +1,9 @@
 import s from './price.module.css';
 
 type Props = {
-  text: string;
+  children: React.ReactNode;
 };
 
-export const Price = ({ text }: Props) => {
-  return <p className={s.price}>{text}</p>;
+export const Price = ({ children }: Props) => {
+  return <p className={s.price}>{children}</p>;
 };
