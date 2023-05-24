@@ -1,0 +1,16 @@
+.container {
+    flex-direction: column;
+}
+
+.preview {
+    width: 100%;
+    margin-bottom: 20px;
+    text-align: center;
+    overflow: hidden;
+}
+
+.preview img {
+    max-width: 400px;
+    width: 100%;
+    height: auto;
+}
