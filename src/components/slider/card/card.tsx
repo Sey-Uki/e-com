@@ -13,7 +13,7 @@ export const Card = ({ title, price, description }: Props) => {
   return (
     <div className={s.card}>
       <Price text={`${price}₽`} />
-      <SectionTitle content={title} />
+      <SectionTitle>{title}</SectionTitle>
       <p className={s.description}>{description}</p>
       <Button>Подробнее</Button>
     </div>
