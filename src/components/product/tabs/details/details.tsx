@@ -1,6 +1,6 @@
-import s from './tabs.module.css';
-import { MainTitle } from '../../mainTitle/mainTitle';
-import { Price } from '../../price/price';
+import s from './details.module.css';
+import { MainTitle } from '../../../mainTitle/mainTitle';
+import { Price } from '../../../price/price';
 
 type Props = {
   price?: string;

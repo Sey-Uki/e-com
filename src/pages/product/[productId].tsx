@@ -6,7 +6,8 @@ import { useRouter } from 'next/router';
 import s from './product.module.css';
 import { Container } from '../../components/container/container';
 import Layout from '../../components/layout';
-import { DetailsTab } from '../../components/product/tabs/details';
+import { DetailsTab } from '../../components/product/tabs/details/details';
+import { SpecsTab } from '../../components/product/tabs/specs/specs';
 import { SectionTitle } from '../../components/sectionTitle/sectionTitle';
 import { PRODUCTS } from '../../utils/products';
 import { NextPageWithLayout } from '../_app';
@@ -66,6 +67,7 @@ const ProductPage: NextPageWithLayout = () => {
           title={product?.name}
         />
       )}
+      {activeTab === 1 && <SpecsTab specs={product?.specs} />}
     </Container>
   );
 };
