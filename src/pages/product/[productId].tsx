@@ -1,4 +1,4 @@
-import React, { ReactElement, useMemo } from 'react';
+import React, { ReactElement, useMemo, useState } from 'react';
 
 import Image from 'next/image';
 import { useRouter } from 'next/router';
@@ -13,6 +13,8 @@ import { NextPageWithLayout } from '../_app';
 
 const ProductPage: NextPageWithLayout = () => {
   const router = useRouter();
+
+  const [activeTab, setActiveTab] = useState(0);
 
   const { productId } = router.query;
 
@@ -38,6 +40,27 @@ const ProductPage: NextPageWithLayout = () => {
       )}
 
       <MainTitle>{product?.name}</MainTitle>
+
+      <section className={s.tabs}>
+        <button
+          className={activeTab === 0 ? s.active : ''}
+          onClick={() => setActiveTab(0)}
+        >
+          Описание
+        </button>
+        <button
+          className={activeTab === 1 ? s.active : ''}
+          onClick={() => setActiveTab(1)}
+        >
+          Характеристики
+        </button>
+        <button
+          className={activeTab === 2 ? s.active : ''}
+          onClick={() => setActiveTab(2)}
+        >
+          Отзывы
+        </button>
+      </section>
     </Container>
   );
 };
