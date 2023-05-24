@@ -1,0 +1,30 @@
+.specs {
+    width: 100%;
+}
+
+.item {
+    margin-bottom: 20px;
+}
+
+.subItem {
+    margin-bottom: 2px;
+}
+
+.specs h3 {
+    color: #7f7f7f;
+}
+
+.specs h3 {
+    border-bottom: 1px solid black;
+    padding-bottom: 5px;
+
+    font-size: 16px;
+}
+
+.specs strong {
+    display: inline-block;
+    margin-right: 10px;
+    border-right: 1px solid black;
+    padding-right: 10px;
+    margin-bottom: 5px;
+}
