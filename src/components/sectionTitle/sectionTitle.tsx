@@ -1,17 +1,17 @@
 import s from './sectionTitle.module.css';
 
 type Props = {
-  content: string | JSX.Element;
+  children: React.ReactNode;
   withMarginBottom?: boolean;
 };
 
-export const SectionTitle = ({ content, withMarginBottom = true }: Props) => {
+export const SectionTitle = ({ children, withMarginBottom = true }: Props) => {
   return (
     <h2
       className={s.sectionTitle}
       style={{ marginBottom: withMarginBottom ? 20 : 0 }}
     >
-      {content}
+      {children}
     </h2>
   );
 };

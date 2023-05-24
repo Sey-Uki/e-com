@@ -11,10 +11,9 @@ export const HeaderContent = () => {
   return (
     <Container extraClass={s.container}>
       <div className={s.title}>
-        <SectionTitle
-          content={<Link href="/">SHOP.</Link>}
-          withMarginBottom={false}
-        />
+        <SectionTitle withMarginBottom={false}>
+          <Link href="/">SHOP.</Link>
+        </SectionTitle>
       </div>
 
       <ul className={s.nav}>
