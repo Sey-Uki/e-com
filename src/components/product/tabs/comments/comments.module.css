@@ -1,0 +1,27 @@
+.comments {
+    width: 100%;
+}
+
+.text {
+    padding: 20px;
+    background-color: rgba(0,0,0,.04);
+    border-radius: 4px;
+}
+
+.bottom {
+    margin: 15px 0;
+
+    display: flex;
+    align-items: center;
+}
+
+.rate {
+    display: flex;
+    align-items: center;
+    margin-left: 10px;
+}
+
+.item svg {
+    width: 24px;
+    height: 24px;
+}
