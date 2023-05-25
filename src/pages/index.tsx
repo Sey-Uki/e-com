@@ -1,5 +1,6 @@
 import { Nunito_Sans } from 'next/font/google';
 
+import { Footer } from '../components/footer/footer';
 import { Header } from '../components/header/header';
 import { Products } from '../components/home/products/products';
 import { Slider } from '../components/home/slider/slider';
@@ -17,6 +18,7 @@ export default function Home() {
         <Slider />
         <Products />
       </main>
+      <Footer />
     </div>
   );
 }

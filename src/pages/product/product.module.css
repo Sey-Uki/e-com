@@ -1,3 +1,7 @@
+.product {
+    padding: 40px 20px;
+}
+
 .container {
     flex-direction: column;
 }

@@ -27,53 +27,55 @@ const ProductPage: NextPageWithLayout = () => {
   );
 
   return (
-    <Container extraClass={s.container}>
-      <SectionTitle>Информация о товаре</SectionTitle>
-      {product?.thumbnail && (
-        <div className={s.preview}>
-          <Image
-            priority
-            alt={product?.name}
-            height={0}
-            sizes="100vw"
-            src={product.thumbnail}
-            width={0}
+    <div className={s.product}>
+      <Container extraClass={s.container}>
+        <SectionTitle>Информация о товаре</SectionTitle>
+        {product?.thumbnail && (
+          <div className={s.preview}>
+            <Image
+              priority
+              alt={product?.name}
+              height={0}
+              sizes="100vw"
+              src={product.thumbnail}
+              width={0}
+            />
+          </div>
+        )}
+
+        <Button extraClass={s.addToCart}>Добавить в корзину</Button>
+
+        <section className={s.tabs}>
+          <button
+            className={activeTab === 0 ? s.active : ''}
+            onClick={() => setActiveTab(0)}
+          >
+            Описание
+          </button>
+          <button
+            className={activeTab === 1 ? s.active : ''}
+            onClick={() => setActiveTab(1)}
+          >
+            Характеристики
+          </button>
+          <button
+            className={activeTab === 2 ? s.active : ''}
+            onClick={() => setActiveTab(2)}
+          >
+            Отзывы
+          </button>
+        </section>
+        {activeTab === 0 && (
+          <DetailsTab
+            description={product?.description}
+            price={product?.price}
+            title={product?.name}
           />
-        </div>
-      )}
-
-      <Button extraClass={s.addToCart}>Добавить в корзину</Button>
-
-      <section className={s.tabs}>
-        <button
-          className={activeTab === 0 ? s.active : ''}
-          onClick={() => setActiveTab(0)}
-        >
-          Описание
-        </button>
-        <button
-          className={activeTab === 1 ? s.active : ''}
-          onClick={() => setActiveTab(1)}
-        >
-          Характеристики
-        </button>
-        <button
-          className={activeTab === 2 ? s.active : ''}
-          onClick={() => setActiveTab(2)}
-        >
-          Отзывы
-        </button>
-      </section>
-      {activeTab === 0 && (
-        <DetailsTab
-          description={product?.description}
-          price={product?.price}
-          title={product?.name}
-        />
-      )}
-      {activeTab === 1 && <SpecsTab specs={product?.specs} />}
-      {activeTab === 2 && <CommentsTab comments={product?.comments} />}
-    </Container>
+        )}
+        {activeTab === 1 && <SpecsTab specs={product?.specs} />}
+        {activeTab === 2 && <CommentsTab comments={product?.comments} />}
+      </Container>
+    </div>
   );
 };
 
