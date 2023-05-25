@@ -94,3 +94,7 @@ a {
 main {
   margin-top: 70px;
 }
+
+ul {
+  list-style-type: none;
+}
