@@ -4,6 +4,7 @@ import Image from 'next/image';
 import { useRouter } from 'next/router';
 
 import s from './product.module.css';
+import { Button } from '../../components/button/button';
 import { Container } from '../../components/container/container';
 import Layout from '../../components/layout';
 import { CommentsTab } from '../../components/product/tabs/comments/comments';
@@ -40,6 +41,8 @@ const ProductPage: NextPageWithLayout = () => {
           />
         </div>
       )}
+
+      <Button extraClass={s.addToCart}>Добавить в корзину</Button>
 
       <section className={s.tabs}>
         <button

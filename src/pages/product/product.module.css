@@ -15,6 +15,10 @@
     height: auto;
 }
 
+.addToCart {
+    margin-bottom: 20px;
+}
+
 .tabs {
     margin: 0 0 2em;
     padding: 3px;
