@@ -44,7 +44,10 @@
 			{
 				"vars": "all",
 				"args": "all",
-				"ignoreRestSiblings": false
+				"ignoreRestSiblings": false,
+				"argsIgnorePattern": "^_",
+				"varsIgnorePattern": "^_",
+				"caughtErrorsIgnorePattern": "^_"
 			}
 		],
 		// common rules
