@@ -3,3 +3,7 @@
 
     text-align: center;
 }
+
+.container {
+    flex-direction: column;
+}
