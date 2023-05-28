@@ -1,5 +1,5 @@
 .form {
-    width: 600px;
+    width: 50%;
 }
 
 .form input, .form textarea {
@@ -14,6 +14,10 @@
     color: #555;
 
     outline-color: #d1c286;
+}
+
+.form input::placeholder, .form textarea::placeholder {
+    color: #828282;
 }
 
 .top {
