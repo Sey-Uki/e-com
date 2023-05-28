@@ -2,14 +2,14 @@ import Link from 'next/link';
 
 import s from './footer.module.css';
 import { Container } from '../container/container';
-import { Subtitle } from '../subtitle/subtitle';
+import { Logo } from '../logo/logo';
 
 export const Footer = () => {
   return (
     <footer className={s.footer}>
       <Container extraClass={s.container}>
         <div className={s.left}>
-          <Subtitle>Shop.</Subtitle>
+          <Logo />
           <p>
             Facilis ipsum reprehenderit nemo molestias. Aut cum mollitia
             reprehenderit. Eos cumque dicta adipisci architecto culpa amet.
