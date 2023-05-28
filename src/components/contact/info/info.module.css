@@ -1,0 +1,25 @@
+.info {
+    width: 50%;
+}
+
+.info svg {
+    width: 24px;
+    height: 24px;
+}
+
+.info div {
+    display: flex;
+    align-items: center;
+
+    margin-bottom: 5px;
+}
+
+.info div a {
+    margin-left: 5px;
+    color: #828282;
+    text-decoration-color: #828282;
+}
+
+.info div a:hover {
+    text-decoration: underline;
+}

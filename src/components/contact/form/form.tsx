@@ -1,9 +1,11 @@
 import s from './form.module.css';
 import { Button } from '../../button/button';
+import { SectionTitle } from '../../sectionTitle/sectionTitle';
 
 export const ContactForm = () => {
   return (
     <form className={s.form}>
+      <SectionTitle>Напишите нам</SectionTitle>
       <div className={s.top}>
         <div>
           <input placeholder="Имя" type="text" />
