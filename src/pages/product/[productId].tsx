@@ -43,7 +43,7 @@ const ProductPage: NextPageWithLayout = () => {
           </div>
         )}
 
-        <Button extraClass={s.addToCart}>Добавить в корзину</Button>
+        <Button>Добавить в корзину</Button>
 
         <section className={s.tabs}>
           <button

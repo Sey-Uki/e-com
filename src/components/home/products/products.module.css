@@ -1,5 +1,6 @@
 .products {
     padding: 40px 20px;
+
 }
 
 .container {
@@ -32,7 +33,9 @@
 
 .content {
     display: flex;
-    justify-content: space-between;
+    justify-content: space-evenly;
+
+    width: 100%;
 }
 
 .content a {
@@ -47,7 +50,7 @@
 
 .item {
     margin-bottom: 40px;
-    width: 32%;
+    width: 300px;
     text-align: center;
 }
 

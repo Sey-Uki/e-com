@@ -3,28 +3,20 @@ import Link from 'next/link';
 
 import s from './header.module.css';
 import { Container } from '../container/container';
-import { SectionTitle } from '../sectionTitle/sectionTitle';
+import { Logo } from '../logo/logo';
 
 const basketIcon = '/assets/images/basket.svg';
 
 export const HeaderContent = () => {
   return (
     <Container extraClass={s.container}>
-      <div className={s.title}>
-        <SectionTitle withMarginBottom={false}>
-          <Link href="/">SHOP.</Link>
-        </SectionTitle>
-      </div>
-
+      <Logo />
       <ul className={s.nav}>
         <li>
-          <Link href="/">Shop</Link>
+          <Link href="/">О нас</Link>
         </li>
         <li>
-          <Link href="/">About</Link>
-        </li>
-        <li>
-          <Link href="/">Services</Link>
+          <Link href="/">Каталог</Link>
         </li>
         <li>
           <Link href="/contact">Контакты</Link>

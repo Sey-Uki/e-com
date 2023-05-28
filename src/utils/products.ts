@@ -73,32 +73,20 @@ const comments: CommentItem[] = [
 export const PRODUCTS = [
   {
     id: 1,
-    name: 'Hauteville Concrete Rocking Chair',
-    price: '100₽',
+    name: 'Кронштейн Желоба (MAX)',
+    price: '42₽',
     description: lorem,
     specs,
     comments,
-    thumbnail:
-      'https://www.free-css.com/assets/files/free-css-templates/preview/page225/shop/assets/images/product-1.jpg',
+    thumbnail: require('../../public/assets/images/brackets/bracket1.jpeg'),
   },
   {
     id: 2,
-    name: 'Pavilion Speaker',
-    price: '150₽',
+    name: 'Кронштейн Желоба (MIN)',
+    price: '38₽',
     description: lorem,
     specs,
     comments,
-    thumbnail:
-      'https://www.free-css.com/assets/files/free-css-templates/preview/page225/shop/assets/images/product-2.jpg',
-  },
-  {
-    id: 3,
-    name: 'LIGOMANCER',
-    price: '50₽',
-    description: lorem,
-    specs,
-    comments,
-    thumbnail:
-      'https://www.free-css.com/assets/files/free-css-templates/preview/page225/shop/assets/images/product-3.jpg',
+    thumbnail: require('../../public/assets/images/brackets/bracket2.webp'),
   },
 ];
