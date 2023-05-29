@@ -1,7 +1,8 @@
 type SpecsListItem = {
-  id: 1;
+  id: number;
   key: string;
   value: string;
+  imageSrc?: string;
 };
 
 export type SpecsItem = {
@@ -13,33 +14,23 @@ export type SpecsItem = {
 const specs: SpecsItem[] = [
   {
     id: 1,
-    title: 'Title 1',
+    title: 'Основные',
     list: [
       {
         id: 1,
-        key: 'key1',
-        value: 'value1',
+        key: 'Материал',
+        value: 'Сталь 4 мм',
       },
       {
-        id: 1,
-        key: 'key2',
-        value: 'value2',
-      },
-    ],
-  },
-  {
-    id: 2,
-    title: 'Title 2',
-    list: [
-      {
-        id: 1,
-        key: 'key1',
-        value: 'value1',
+        id: 2,
+        key: 'Покрытие',
+        value: 'Порошковое по RAL',
       },
       {
-        id: 1,
-        key: 'key2',
-        value: 'value2',
+        id: 3,
+        key: 'Размеры',
+        value: 'Открыть изображение',
+        imageSrc: require('../../public/assets/images/products/min.png'),
       },
     ],
   },

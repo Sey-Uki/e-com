@@ -27,4 +27,10 @@
     border-right: 1px solid black;
     padding-right: 10px;
     margin-bottom: 5px;
+    min-width: 100px;
+}
+
+.specs button {
+    font-size: 16px;
+    text-decoration: underline;
 }
