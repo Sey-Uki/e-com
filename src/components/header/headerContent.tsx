@@ -23,7 +23,9 @@ export const HeaderContent = () => {
         </li>
       </ul>
 
-      <Image priority alt="basket" height={25} src={basketIcon} width={25} />
+      <Link href="/cart">
+        <Image priority alt="basket" height={25} src={basketIcon} width={25} />
+      </Link>
     </Container>
   );
 };
