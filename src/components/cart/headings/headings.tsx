@@ -1,8 +1,8 @@
-import s from './headers.module.css';
+import s from './headings.module.css';
 
-export const CartHeaders = () => {
+export const CartHeadings = () => {
   return (
-    <div className={s.headers}>
+    <div className={s.headings}>
       <span className={s.thumbnail}>
         <strong>Фото</strong>
       </span>
@@ -10,10 +10,10 @@ export const CartHeaders = () => {
         <strong>Наименование</strong>
       </span>
       <span className={s.amount}>
-        <strong>Количество</strong>
+        <strong>Кол-во</strong>
       </span>
       <span className={s.price}>
-        <strong>Стоимость</strong>
+        <strong>Цена</strong>
       </span>
       <span className={s.colors}>
         <strong>Цвет</strong>

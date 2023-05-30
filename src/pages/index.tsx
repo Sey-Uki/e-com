@@ -12,7 +12,7 @@ const nunito = Nunito_Sans({
 
 export default function Home() {
   return (
-    <div className={nunito.className}>
+    <div className={`${nunito.className} root`}>
       <Header />
       <main>
         <Slider />

@@ -4,7 +4,7 @@ import Image from 'next/image';
 
 import s from './cart.module.css';
 import { Button } from '../../components/button/button';
-import { CartHeaders } from '../../components/cart/headers/headers';
+import { CartHeadings } from '../../components/cart/headings/headings';
 import { Container } from '../../components/container/container';
 import Layout from '../../components/layout';
 import { MainTitle } from '../../components/mainTitle/mainTitle';
@@ -71,7 +71,7 @@ const CartPage = () => {
         <MainTitle>Корзина</MainTitle>
         <div className={s.content}>
           <section className={s.items}>
-            <CartHeaders />
+            <CartHeadings />
 
             {cartItems.map(
               ({ id, name, price, amount, thumbnail, color }, index) => {
@@ -89,7 +89,7 @@ const CartPage = () => {
                     <input
                       defaultValue={amount}
                       max={20}
-                      min={0}
+                      min={1}
                       type="number"
                     />
                     <Price>{`${price}₽`}</Price>
@@ -132,7 +132,7 @@ const CartPage = () => {
           <section className={s.summary}>
             <div className={s.info}>
               <div>
-                <strong>Товары</strong>
+                <strong>Всего товаров</strong>
                 <span>{totalAmount}</span>
               </div>
 
