@@ -25,6 +25,7 @@ export const HeaderContent = () => {
 
       <Link href="/cart">
         <Image priority alt="basket" height={25} src={basketIcon} width={25} />
+        <span className={s.cartCount}>3</span>
       </Link>
     </Container>
   );
