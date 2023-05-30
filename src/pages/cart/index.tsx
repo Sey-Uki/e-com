@@ -8,7 +8,6 @@ import { Container } from '../../components/container/container';
 import Layout from '../../components/layout';
 import { MainTitle } from '../../components/mainTitle/mainTitle';
 import { Price } from '../../components/price/price';
-import { SectionTitle } from '../../components/sectionTitle/sectionTitle';
 import { Subtitle } from '../../components/subtitle/subtitle';
 import { CART_ITEMS, CartItem } from '../../utils/cart';
 
@@ -57,6 +56,11 @@ const CartPage = () => {
 
   const totalPrice = useMemo(
     () => CART_ITEMS.reduce((acc, item) => acc + item.price * item.amount, 0),
+    [],
+  );
+
+  const totalWeight = useMemo(
+    () => CART_ITEMS.reduce((acc, item) => acc + item.weight * item.amount, 0),
     [],
   );
 
@@ -124,20 +128,27 @@ const CartPage = () => {
 
           <section className={s.summary}>
             <div className={s.info}>
-              <SectionTitle>Ваша корзина</SectionTitle>
-
               <div>
                 <strong>Товары</strong>
                 <span>{totalAmount}</span>
               </div>
 
               <div>
-                <strong>Цена</strong>
+                <strong>Общая цена</strong>
                 <span>{`${totalPrice}₽`}</span>
               </div>
+
+              <div>
+                <strong>Общий вес</strong>
+                <span>{totalWeight} кг</span>
+              </div>
+
+              <p>Окончательная цена будет зависеть от доставки</p>
             </div>
 
-            <Button>Перейти к оформлению</Button>
+            <div className={s.bottom}>
+              <Button>Перейти к оформлению</Button>
+            </div>
           </section>
         </div>
       </Container>
