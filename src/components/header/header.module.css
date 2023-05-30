@@ -37,3 +37,18 @@
 .nav a:hover {
   color: #000;
 }
+
+.container > a {
+  position: relative;
+}
+
+.container > a > span {
+  position: absolute;
+  background-color: #d0c386;
+  width: 20px;
+  height: 20px;
+  text-align: center;
+  border-radius: 50%;
+  top: -9px;
+  right: -10px;
+}
