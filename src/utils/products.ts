@@ -63,6 +63,11 @@ export const PRODUCTS = [
             value: 'Открыть изображение',
             imageSrc: require('../../public/assets/images/products/min.png'),
           },
+          {
+            id: 4,
+            key: 'Вес',
+            value: '0.2 кг',
+          },
         ],
       },
     ],
@@ -94,6 +99,11 @@ export const PRODUCTS = [
             key: 'Размеры',
             value: 'Открыть изображение',
             imageSrc: require('../../public/assets/images/products/max.png'),
+          },
+          {
+            id: 4,
+            key: 'Вес',
+            value: '0.5 кг',
           },
         ],
       },

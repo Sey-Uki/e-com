@@ -3,6 +3,7 @@ export type CartItem = {
   name: string;
   price: number;
   amount: number;
+  weight: number;
   thumbnail: string;
   color: string;
 };
@@ -14,6 +15,7 @@ export const CART_ITEMS: CartItem[] = [
     price: 38,
     amount: 1,
     thumbnail: require('../../public/assets/images/brackets/bracket1.jpeg'),
+    weight: 0.3,
     color: 'red',
   },
   {
@@ -22,6 +24,7 @@ export const CART_ITEMS: CartItem[] = [
     price: 42,
     amount: 2,
     thumbnail: require('../../public/assets/images/brackets/bracket2.webp'),
+    weight: 0.5,
     color: 'skyBlue',
   },
 ];

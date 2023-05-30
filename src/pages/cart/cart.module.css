@@ -63,8 +63,14 @@
     font-size: 18px;
 }
 
+.summary p {
+    color: #828282;
+    text-align: justify;
+}
+
 .summary button {
-    padding: 10px 25px;
+    width: 100%;
+    padding: 10px 0;
 }
 
 .colors {
