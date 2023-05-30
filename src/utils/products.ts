@@ -11,31 +11,6 @@ export type SpecsItem = {
   list: SpecsListItem[];
 };
 
-const specs: SpecsItem[] = [
-  {
-    id: 1,
-    title: 'Основные',
-    list: [
-      {
-        id: 1,
-        key: 'Материал',
-        value: 'Сталь 4 мм',
-      },
-      {
-        id: 2,
-        key: 'Покрытие',
-        value: 'Порошковое по RAL',
-      },
-      {
-        id: 3,
-        key: 'Размеры',
-        value: 'Открыть изображение',
-        imageSrc: require('../../public/assets/images/products/min.png'),
-      },
-    ],
-  },
-];
-
 export type CommentItem = {
   id: number;
   text: string;
@@ -64,19 +39,65 @@ const comments: CommentItem[] = [
 export const PRODUCTS = [
   {
     id: 1,
-    name: 'Кронштейн Желоба (MAX)',
-    price: '42₽',
+    name: 'Кронштейн Желоба (MIN)',
+    price: '38₽',
     description: lorem,
-    specs,
+    specs: [
+      {
+        id: 1,
+        title: 'Основные',
+        list: [
+          {
+            id: 1,
+            key: 'Материал',
+            value: 'Сталь 4 мм',
+          },
+          {
+            id: 2,
+            key: 'Покрытие',
+            value: 'Порошковое по RAL',
+          },
+          {
+            id: 3,
+            key: 'Размеры',
+            value: 'Открыть изображение',
+            imageSrc: require('../../public/assets/images/products/min.png'),
+          },
+        ],
+      },
+    ],
     comments,
     thumbnail: require('../../public/assets/images/brackets/bracket1.jpeg'),
   },
   {
     id: 2,
-    name: 'Кронштейн Желоба (MIN)',
-    price: '38₽',
+    name: 'Кронштейн Желоба (MAX)',
+    price: '42₽',
     description: lorem,
-    specs,
+    specs: [
+      {
+        id: 1,
+        title: 'Основные',
+        list: [
+          {
+            id: 1,
+            key: 'Материал',
+            value: 'Сталь 4 мм',
+          },
+          {
+            id: 2,
+            key: 'Покрытие',
+            value: 'Порошковое по RAL',
+          },
+          {
+            id: 3,
+            key: 'Размеры',
+            value: 'Открыть изображение',
+            imageSrc: require('../../public/assets/images/products/max.png'),
+          },
+        ],
+      },
+    ],
     comments,
     thumbnail: require('../../public/assets/images/brackets/bracket2.webp'),
   },
