@@ -1,42 +1,144 @@
-import { ReactElement } from 'react';
+import { ReactElement, useMemo, useState } from 'react';
 
 import Image from 'next/image';
 
 import s from './cart.module.css';
+import { Button } from '../../components/button/button';
 import { Container } from '../../components/container/container';
 import Layout from '../../components/layout';
 import { MainTitle } from '../../components/mainTitle/mainTitle';
 import { Price } from '../../components/price/price';
+import { SectionTitle } from '../../components/sectionTitle/sectionTitle';
 import { Subtitle } from '../../components/subtitle/subtitle';
-import { CART_ITEMS } from '../../utils/cart';
+import { CART_ITEMS, CartItem } from '../../utils/cart';
+
+const COLORS = ['red', 'green', 'blue', 'orange', 'yellow', 'skyblue'];
 
 const CartPage = () => {
+  const [cartItems, setCartItems] = useState<CartItem[]>(CART_ITEMS);
+
+  const [visibleDropDowns, setVisibleDropDowns] = useState<
+    (boolean | undefined)[]
+  >([]);
+
+  const handleShowDropdown = (index: number) => {
+    setVisibleDropDowns((v) => {
+      const temp = [...v];
+
+      if (temp[index]) {
+        temp[index] = false;
+      } else {
+        temp[index] = true;
+      }
+
+      return temp;
+    });
+  };
+
+  const handleSelectColor = (index: number, color: string) => {
+    setCartItems((c) =>
+      c.map((item, i) => {
+        if (i === index) {
+          return {
+            ...item,
+            color,
+          };
+        }
+
+        return item;
+      }),
+    );
+  };
+
+  const totalAmount = useMemo(
+    () => CART_ITEMS.reduce((acc, item) => acc + item.amount, 0),
+    [],
+  );
+
+  const totalPrice = useMemo(
+    () => CART_ITEMS.reduce((acc, item) => acc + item.price * item.amount, 0),
+    [],
+  );
+
   return (
     <div className={s.cart}>
       <Container extraClass={s.container}>
         <MainTitle>Корзина</MainTitle>
         <div className={s.content}>
           <section className={s.items}>
-            {CART_ITEMS.map(({ id, name, price, amount, thumbnail }) => {
-              return (
-                <div className={s.item} key={id}>
-                  <Image
-                    priority
-                    alt="basket"
-                    height={0}
-                    sizes="100vw"
-                    src={thumbnail}
-                    width={0}
-                  />
-                  <Subtitle>{name}</Subtitle>
-                  <input max={20} min={0} type="number" value={amount} />
-                  <Price>{price}</Price>
-                </div>
-              );
-            })}
+            {cartItems.map(
+              ({ id, name, price, amount, thumbnail, color }, index) => {
+                return (
+                  <div className={s.item} key={id}>
+                    <Image
+                      priority
+                      alt="basket"
+                      height={0}
+                      sizes="100vw"
+                      src={thumbnail}
+                      width={0}
+                    />
+                    <Subtitle>{name}</Subtitle>
+                    <input
+                      defaultValue={amount}
+                      max={20}
+                      min={0}
+                      type="number"
+                    />
+                    <Price>{`${price}₽`}</Price>
+                    <div
+                      className={s.colors}
+                      onClick={() => handleShowDropdown(index)}
+                    >
+                      <div
+                        className={s.preview}
+                        style={{
+                          backgroundColor: color,
+                        }}
+                      >
+                        {visibleDropDowns[index] ? (
+                          <span className={s.arrow}>▲</span>
+                        ) : (
+                          <span className={s.arrow}>▼</span>
+                        )}
+                      </div>
+                      {visibleDropDowns[index] && (
+                        <div className={s.dropDown}>
+                          {COLORS.map((color) => {
+                            return (
+                              <div
+                                key={color}
+                                style={{ backgroundColor: color }}
+                                onClick={() => handleSelectColor(index, color)}
+                              />
+                            );
+                          })}
+                        </div>
+                      )}
+                    </div>
+                  </div>
+                );
+              },
+            )}
           </section>
 
-          <section className={s.summary}></section>
+          <section className={s.summary}>
+            <div className={s.info}>
+              <SectionTitle>Ваша корзина</SectionTitle>
+
+              <div>
+                <strong>Товары</strong>
+                <span>{totalAmount}</span>
+              </div>
+
+              <div>
+                <strong>Цена</strong>
+                <span>{`${totalPrice}₽`}</span>
+              </div>
+            </div>
+
+            <Button>Перейти к оформлению</Button>
+          </section>
         </div>
       </Container>
     </div>
