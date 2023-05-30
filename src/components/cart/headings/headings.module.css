@@ -1,4 +1,4 @@
-.headers {
+.headings {
     width: 100%;
     display: flex;
     align-items: center;
@@ -14,15 +14,11 @@
 }
 
 .name {
-    width: 225px;
+    width: 250px;
 }
 
 .amount {
-    width: 45px;
-}
-
-.name {
-    width: 225px;
+    width: 55px;
 }
 
 .price {

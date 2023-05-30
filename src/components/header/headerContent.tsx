@@ -11,17 +11,19 @@ export const HeaderContent = () => {
   return (
     <Container extraClass={s.container}>
       <Logo />
-      <ul className={s.nav}>
-        <li>
-          <Link href="/">О нас</Link>
-        </li>
-        <li>
-          <Link href="/">Каталог</Link>
-        </li>
-        <li>
-          <Link href="/contact">Контакты</Link>
-        </li>
-      </ul>
+      <nav className={s.nav}>
+        <ul>
+          <li>
+            <Link href="/">О нас</Link>
+          </li>
+          <li>
+            <Link href="/">Каталог</Link>
+          </li>
+          <li>
+            <Link href="/contact">Контакты</Link>
+          </li>
+        </ul>
+      </nav>
 
       <Link href="/cart">
         <Image priority alt="basket" height={25} src={basketIcon} width={25} />

@@ -14,7 +14,7 @@ type Props = {
 
 export default function Layout({ children }: Props) {
   return (
-    <div className={nunito.className}>
+    <div className={`${nunito.className} root`}>
       <Header />
       <main>{children}</main>
       <Footer />

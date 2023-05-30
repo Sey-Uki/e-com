@@ -18,14 +18,16 @@
 .items {
     display: flex;
     flex-direction: column;
-    width: 70%;
+    width: 75%;
+
+    padding-right: 20px;
 }
 
 .item {
     display: flex;
     align-items: center;
     justify-content: space-between;
-    border-bottom: 1px solid #d1c286;
+    border-bottom: 1px solid black;
 
     padding-bottom: 10px;
 }
@@ -41,19 +43,23 @@
 }
 
 .item h3 {
-    width: 225px;
+    width: 250px;
 }
 
 .item input {
-    width: 45px;
+    width: 55px;
 }
 
 .summary {
-    width: 30%;
+    width: 25%;
     display: flex;
     flex-direction: column;
     justify-content: space-between;
     padding-left: 40px;
+    padding: 14px;
+    border-radius: 4px;
+    box-shadow: 0px 2px 7px #ccc;
+    margin-top: 24px;
 }
 
 .info div {
