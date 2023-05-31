@@ -1,0 +1,10 @@
+.confirmation svg {
+    width: 150px;
+    height: 150px;
+
+    margin-bottom: 15px;
+}
+
+.confirmation h2 {
+    font-size: 22px;
+}
