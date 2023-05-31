@@ -1,0 +1,101 @@
+.form {
+    width: 100%;
+}
+
+.form h2 {
+    font-size: 20px;
+}
+
+.form input, .form textarea, .form select {
+    border: 2px solid rgba(0,0,0,.1);
+    height: 54px;
+    font-size: 18px;
+    font-weight: 300;
+    padding: 10px 20px;
+    border-radius: 4px;
+
+    line-height: 1.42857;
+    color: #555;
+
+    outline-color: #d1c286;
+}
+
+.form input::placeholder, .form textarea::placeholder {
+    color: #828282;
+}
+
+.form > div {
+    margin-bottom: 15px;
+}
+
+.top {
+    margin-bottom: 15px;
+    display: flex;
+}
+
+.top div {
+    width: 50%;
+}
+
+.top div:first-of-type {
+    padding-right: 10px ;
+}
+
+.top div:last-of-type {
+    padding-left: 10px ;
+}
+
+.top div input, .form select {
+    width: 100%;
+}
+
+.contactOptions {
+    position: relative;
+}
+
+.contactOptions select {
+    -moz-appearance: none;
+    -webkit-appearance: none;
+    appearance: none;
+}
+
+.contactOptions svg {
+    width: 20px;
+    height: 20px;
+
+    position: absolute;
+    right: 10px;
+    top: 50%;
+    transform: translateY(-50%);
+}
+
+.form textarea {
+    height: auto;
+    margin-top: 15px;
+    resize: vertical;
+}
+
+.form input, .form textarea {
+    width: 100%;
+}
+
+.buttonWrapper {
+    width: 100%;
+
+    text-align: center;
+}
+
+.form button {
+    color: white;
+    background-color: #d1c286;
+    padding: 10px 50px;
+
+    margin-top: 15px;
+
+    width: 100%;
+}
+
+.form button:hover {
+    color: #d1c286;
+    background-color: white;
+}
