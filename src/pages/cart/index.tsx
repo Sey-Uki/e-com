@@ -5,6 +5,7 @@ import Image from 'next/image';
 import s from './cart.module.css';
 import { Button } from '../../components/button/button';
 import { CartHeadings } from '../../components/cart/headings/headings';
+import { OrderPlacementModal } from '../../components/cart/orderPlacementModal/orderPlacementModal';
 import { Container } from '../../components/container/container';
 import Layout from '../../components/layout';
 import { MainTitle } from '../../components/mainTitle/mainTitle';
@@ -16,6 +17,11 @@ const COLORS = ['red', 'green', 'blue', 'orange', 'yellow', 'skyblue'];
 
 const CartPage = () => {
   const [cartItems, setCartItems] = useState<CartItem[]>(CART_ITEMS);
+
+  const [showModal, setShowModal] = useState(false);
+
+  const onModalHide = () => setShowModal(false);
+  const onModalShow = () => setShowModal(true);
 
   const [visibleDropDowns, setVisibleDropDowns] = useState<
     (boolean | undefined)[]
@@ -150,11 +156,12 @@ const CartPage = () => {
             </div>
 
             <div className={s.bottom}>
-              <Button>Перейти к оформлению</Button>
+              <Button onClick={onModalShow}>Перейти к оформлению</Button>
             </div>
           </section>
         </div>
       </Container>
+      <OrderPlacementModal showModal={showModal} onModalHide={onModalHide} />
     </div>
   );
 };

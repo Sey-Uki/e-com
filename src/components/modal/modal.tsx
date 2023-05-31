@@ -29,7 +29,7 @@ export const Modal = ({ children, visible, onHide }: Props) => {
         <>
           <div className={s.overlay} onClick={onHide} />
           <div className={s.modal}>
-            <button onClick={onHide}>
+            <button className={s.closeBtn} onClick={onHide}>
               <CloseIcon />
             </button>
             {children}
